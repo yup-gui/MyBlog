@@ -5,9 +5,13 @@
 > 包可以提高代码的可复用性
 >
 常见go内置包里面的函数
-"fmt"
+"fmt"  常见输入输出函数包
    1. Printf  即c里面的printf
    2. Sprintf 可以将打印结果直接返回给变量 eg. k := fmt.Sprintf("%.1f",r)
+"strings"  字符串操作包
+   1. 
+"bytes"  
+   1. 
 ### 2. 终端里面常用go指令
    go mod init packagename  配置包
    go run packagename       运行程序（main包是入口）
@@ -71,3 +75,9 @@
 
 ### 8. 常见转义符
    \t 制表符  \n 换行符  \r回车符(回到当前行的行首,前面的内容会被覆盖)
+
+
+### 9. 切片
+定义并赋值
+   1. var name = []type{value1,value2,...}  name := []type{value1,value2,...}
+   2. var name []type =make([]type,len)   name := make([]type,len)

@@ -4,5 +4,8 @@ import "fmt"
 
 func main() {
 	var a int = 2
-	fmt.Printf("%d", a)
+	b := "strings"
+	c := "type"
+	fmt.Printf("%d\n", a)
+	fmt.Printf("%v,%v", b, c)
 }
