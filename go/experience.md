@@ -1,7 +1,7 @@
 ### 1. Go 包的概念
 > 把相同的功能放到一个文件夹，称之为包
 > 包可以被其他的包引用
-> main包用来生成可执行文件，每个程序只有一个main包
+> main包用来生成可执行文件，每个程序只有一个main包,main包是程序入口
 > 包可以提高代码的可复用性
 >
 常见go内置包里面的函数
@@ -77,7 +77,58 @@
    \t 制表符  \n 换行符  \r回车符(回到当前行的行首,前面的内容会被覆盖)
 
 
-### 9. 切片
+### 9. 切片——动态数组，可以根据数据量自动调节长度
 定义并赋值
    1. var name = []type{value1,value2,...}  name := []type{value1,value2,...}
-   2. var name []type =make([]type,len)   name := make([]type,len)
+   2. var name []type =make([]type,len)   name := make([]type,len)   make函数必须设置切片的长度
+优点：切片会自动改变长度，go不会给他分配内存地址
+
+### 10. 流程控制语法
+if 判断条件 {
+   执行语句
+}else if 判断条件{
+   执行语句
+}else {
+   执行语句
+}
+
+switch 判断对象变量{
+   case 值1：
+         执行语句1
+   case 值2：
+         执行语句2
+   default：（去掉上面所有case后剩余情况）
+         执行语句
+}
+
+for               go中只有for这个循环！！！
+for 变量初始值；判断条件；变量控制（如i++）{
+   执行语句
+}   //三个设置可以随意组合，也可以一个都不要，但是一定要保证循环最后能够跳出
+
+for-range 遍历对象：
+举个例子
+myStr :=[]string{"MYBLOG","NAME"}
+for i,v := range myStr  {   //这里理解成把v赋值成myStr的个个值
+   fmt.Printf("当此循环：%v\n"，i)
+   fmt.Printf("输出对象：%v\n"，v)
+}
+对应输出结果为； 当此循环：0
+               输出对象：MYBLOG
+               当此循环：
+               输出对象：NAME
+
+break 与 continue
+后者和c一样，不多介绍
+break可以直接跳出多层循环，只需额外加上标签（标签需要在指定跳出的循环语句前标记）即可
+举个例子
+for{
+   back:
+   for {
+      for{
+         ....
+         break back
+      }
+   }
+}
+使用break后会终止标签的代码语句
