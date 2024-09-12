@@ -1,0 +1,16 @@
+{
+    "editor.fontSize": 20,
+    "files.autoSave": "onWindowChange",
+    "editor.formatOnSave": true,
+    "files.autoSaveDelay": 500,
+    "workbench.colorTheme": "One Dark Pro Mix",
+    "cmake.configureOnOpen": true,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "window.zoomLevel": 1,
+    "editor.stickyScroll.enabled": false,
+    "powermode.enabled": true,
+    "go.toolsManagement.autoUpdate": true,
+    "git.openRepositoryInParentFolders": "always",
+    "python.formatting.provider":"black"
+  }
