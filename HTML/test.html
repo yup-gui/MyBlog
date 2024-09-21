@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>testfield</title>
+  </head>
+  <body>
+    <div class="overflow-test">
+      <img src="./梗小姐.jpg" alt="" />
+    </div>
+    <div class="div-ul">
+      <div class="dropdown">
+        <p>1</p>
+        <div class="dropdown-content">
+          <p>1.1</p>
+          <p>1.2</p>
+          <p>1.3</p>
+          <p>1.4</p>
+        </div>
+      </div>
+      <div class="dropdown">
+        <p>2</p>
+        <div class="dropdown-content">
+          <p>2.1</p>
+          <p>2.2</p>
+          <p>2.3</p>
+          <p>2.4</p>
+        </div>
+      </div>
+      <div class="dropdown">
+        <p>3</p>
+        <div class="dropdown-content">
+          <p>3.1</p>
+          <p>3.2</p>
+          <p>3.3</p>
+          <p>3.4</p>
+        </div>
+      </div>
+      <div class="dropdown">
+        <p>4</p>
+        <div class="dropdown-content">
+          <p>4.1</p>
+          <p>4.2</p>
+          <p>4.3</p>
+          <p>4.4</p>
+        </div>
+      </div>
+    </div>
+  </body>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+      font-style: normal;
+    }
+    .overflow-test {
+      border-radius: 50%;
+      outline: 20px solid black;
+      width: 50px;
+      height: 50px;
+      overflow: hidden;
+    }
+    .div-ul {
+      width: 408px;
+      height: 40px;
+      padding: 0;
+      background-color: beige;
+      display: flex;
+    }
+    .dropdown {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      width: 100px;
+      height: 40px;
+      border: 1px solid black;
+      text-align: center;
+    }
+    .dropdown p {
+      height: 40px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: darkgrey;
+      width: 100%;
+      height: 160px;
+      padding: 0;
+      margin: 0;
+    }
+    .dropdown-content p {
+      padding-top: 18px;
+      width: 100%;
+      height: 40px;
+      background-color: inherit;
+    }
+    .dropdown-content p:hover {
+      background-color: azure;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  </style>
+</html>
