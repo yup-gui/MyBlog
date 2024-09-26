@@ -5,6 +5,15 @@
 
 #include <iostream>
 using namespace std;
+template <typename T> // 模板函数，T为模拟变量类型
+T max(T a, T b, T c)  // 不加分号,找出三个数中的最大值
+{
+  if (b > a)
+    a = b;
+  if (c > a)
+    a = c;
+  return a;
+}
 int main()
 {
   int category;
@@ -13,42 +22,21 @@ int main()
   {
   case 1:
     int a_num[3];
-    int a_max;
     for (int i = 0; i < 3; i++)
-    {
       cin >> a_num[i];
-      if (i == 1)
-        a_max = a_num[i];
-      if (a_num[i] > a_max)
-        a_max = a_num[i];
-    }
-    cout << a_max << endl;
+    cout << max(a_num[0], a_num[1], a_num[2]) << endl;
     break;
   case 2:
     float b_num[3];
-    float b_max;
     for (int i = 0; i < 3; i++)
-    {
       cin >> b_num[i];
-      if (i == 1)
-        b_max = b_num[i];
-      if (b_num[i] > b_max)
-        b_max = b_num[i];
-    }
-    cout << b_max << endl;
+    cout << max(b_num[0], b_num[1], b_num[2]) << endl;
     break;
   case 3:
     double c_num[3];
-    double c_max;
     for (int i = 0; i < 3; i++)
-    {
       cin >> c_num[i];
-      if (i == 1)
-        c_max = c_num[i];
-      if (c_num[i] > a_max)
-        c_max = c_num[i];
-    }
-    cout << c_max << endl;
+    cout << max(c_num[0], c_num[1], c_num[2]) << endl;
     break;
   default:
     cout << "input error!" << endl;
