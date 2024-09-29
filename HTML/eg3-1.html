@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eg3-1</title>
+  </head>
+  <script>
+    let obj = {
+      name: "ypg",
+      age: 19,
+      hobby: ["arknights", "genshinimpact"],
+    };
+    //in & of 区别？  for/in和for/of 是遍历循环
+    let ex = [123, 456, 789];
+    for (let i in obj) {
+      console.log(i);
+    }
+    for (let i of obj) {
+      console.log(i);
+    }
+    let img = document.getElementsByTagName("img")[0];
+    let width=img.style.width;
+    img.addEventListener("wheel",(WheelEvent)=>{
+      width=width+
+    });
+  </script>
+  <body>
+    <div>
+      这是一张图片<img
+        src="./梗小姐.jpg"
+        alt=""
+        style="width: 100px; height: 100px"
+      />
+    </div>
+  </body>
+</html>

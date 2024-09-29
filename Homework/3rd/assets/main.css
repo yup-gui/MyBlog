@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  font-style: normal;
+}
+
+.main_body {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hidden {
+  transform: translate(-20vw, 0);
+  width: 20vh;
+  height: inherit;
+  background-color: orange;
+  transition: all 1s;
+}
+
+.hidden:hover {
+}
