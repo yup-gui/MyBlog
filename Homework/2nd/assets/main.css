@@ -34,7 +34,7 @@
 
 .content {
   width: 70vw;
-  background-color: greenyellow;
+  background-color: white;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -61,11 +61,35 @@
 
 .hidden {
   display: none;
-  background-color: white;
 }
 .content:hover .dispear {
   display: none;
 }
 .content:hover .hidden {
   display: block;
+}
+
+.content:hover img {
+  animation: img-ease-in 3s linear forwards;
+}
+
+img {
+  max-width: 65vw;
+  max-height: 70vw;
+  filter: opacity(50%);
+}
+
+@keyframes img-ease-in {
+  0% {
+    filter: opacity(0%);
+  }
+  33% {
+    filter: opacity(16.7%);
+  }
+  67% {
+    filter: opacity(33%);
+  }
+  100% {
+    fill: opacity(50%);
+  }
 }

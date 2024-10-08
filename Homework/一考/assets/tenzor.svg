@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1001" height="466" viewBox="0 0 1001 466">
+  <defs>
+    <filter id="Tenzor" x="0" y="0" width="992" height="411" filterUnits="userSpaceOnUse">
+      <feOffset dx="14" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <rect id="矩形_9" data-name="矩形 9" width="1001" height="119" transform="translate(145 645)" fill="#fff"/>
+    </clipPath>
+    <filter id="路径_1" x="90.054" y="340.862" width="812.42" height="138.203" filterUnits="userSpaceOnUse">
+      <feOffset dx="19" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="路径_2" x="892.5" y="371.264" width="83" height="77" filterUnits="userSpaceOnUse">
+      <feOffset dx="6" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="title" transform="translate(-145 -298)">
+    <g transform="matrix(1, 0, 0, 1, 145, 298)" filter="url(#Tenzor)">
+      <text id="Tenzor-2" data-name="Tenzor" transform="translate(0 328)" fill="#ef4126" font-size="296" font-family="SegoeUI, Segoe UI" letter-spacing="0.074em"><tspan x="0" y="0">Tenzor</tspan></text>
+    </g>
+    <g id="蒙版组_1" data-name="蒙版组 1" clip-path="url(#clip-path)">
+      <g transform="matrix(1, 0, 0, 1, 145, 298)" filter="url(#路径_1)">
+        <path id="路径_1-2" data-name="路径 1" d="M238.554,705H925.517l16.953,59.1,17.8-118.672,12.836,78.347,10.535-42.867L992.6,705h23.371" transform="translate(-145 -298)" fill="none" stroke="#ef4126" stroke-linecap="round" stroke-width="7"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, 145, 298)" filter="url(#路径_2)">
+        <path id="路径_2-2" data-name="路径 2" d="M32.5,59C15.025,47.22,5.86,36.5,2.1,27.533-7.968,3.5,20.793-8,32.5,6.191,44.207-8,72.968,3.5,62.9,27.533,59.14,36.5,49.975,47.22,32.5,59Z" transform="translate(895.5 377.26)" fill="#ef4126"/>
+      </g>
+    </g>
+  </g>
+</svg>
