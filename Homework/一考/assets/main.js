@@ -32,6 +32,7 @@ for(let j = 0 ; j < 5 ; j++){
 let parts=document.getElementsByClassName("parts");
 let whiteLotus=document.getElementsByClassName("white-lotus");
 let blackLotus=document.getElementsByClassName("black-lotus");
+let sideNavSon=document.getElementsByClassName("side-nav-son");
 for(let a=0;a<4;a++){
   if(a==2){
     continue;
@@ -44,8 +45,10 @@ for(let a=0;a<4;a++){
   })
 }
 parts[2].addEventListener("click",function(){
+  let windowHeight=window.innerHeight;
+  let thisScrollTo=deltaY[2]+windowHeight;
   window.scrollTo({
-    top:deltaY[2]+1782,
+    top:thisScrollTo,
     left:0,
     behavior:"smooth"
   })
@@ -65,7 +68,7 @@ window.addEventListener("scroll",function(){
         }
       whiteLotus[c].style.filter="opacity(0)";
       blackLotus[c].style.filter="opacity(0)";
-      parts[c].style.color="#9c9c9c";
+      parts[c].style.color="#cac7c7";
       }
     }
     if(b==3 && windowDeltaY>=deltaY[3]){
@@ -75,7 +78,7 @@ window.addEventListener("scroll",function(){
       for(let c = 0;c<3;c++){
       whiteLotus[c].style.filter="opacity(0)";
       blackLotus[c].style.filter="opacity(0)";
-      parts[c].style.color="#9c9c9c";
+      parts[c].style.color="#cac7c7";
       }
     }
   }
@@ -87,18 +90,21 @@ let arrLeftDistance=serviceArr.offsetLeft;
 let newDistanceX=arrLeftDistance;
 let newDistanceY=serviceArr.offsetTop;
 window.addEventListener("scroll",function(){
+  let windowHeight=window.innerHeight;
+  let windowWidth=window.innerWidth;
   let windowDeltaY=window.scrollY;
+  let minX =windowWidth*0.1;
   if(windowDeltaY >= deltaY[2] && windowDeltaY <= deltaY[3]){
-    newDistanceX=arrLeftDistance+deltaY[2]-window.scrollY;
-    newDistanceY=200-deltaY[2]+window.scrollY;
-    if(newDistanceX<500){ 
-      newDistanceX=500;
+    newDistanceX=arrLeftDistance+(deltaY[2]-window.scrollY)*2;
+    newDistanceY=0.2*windowHeight+window.scrollY-deltaY[2];
+    if(newDistanceX<minX){ 
+      newDistanceX=minX;
     }
     if(newDistanceX>arrLeftDistance){
       newDistanceX=arrLeftDistance;
     }
-    if(newDistanceY>1900){
-      newDistanceY=1900;
+    if(newDistanceY>windowHeight){
+      newDistanceY=1.1*windowHeight;
     }
     console.log(newDistanceX);
     console.log(newDistanceY);
@@ -114,20 +120,20 @@ let selfInformation=document.getElementsByClassName("self-information");
 let dropdown=document.getElementsByClassName("dropdown");
 let arrs=document.getElementsByClassName("arr");
 selfInformation[0].addEventListener("mouseover",function(){
-  dropdown[0].style.transform="translate(1590px,75px)";
+  dropdown[0].style.transform="translate(80vw, 6.9vh)";
   arrs[0].style.rotate=90+"deg";
-  this.style.height=60+"px";
+  this.style.height=6.5+"vh";
 })
 selfInformation[0].addEventListener("mouseout",function(){
   arrs[0].style.rotate=0+"deg";
+  dropdown[0].style.transform="translate(80vw, -10.1vh)";
 })
 dropdown[0].addEventListener("mouseover",function(){
-  this.style.transform="translate(1590px,75px)";
+  this.style.transform="translate(80vw,6.9vh)";
   arrs[0].style.rotate=90+"deg";
 
 })
 dropdown[0].addEventListener("mouseout",function(){
-  this.style.transform="translate(1590px,-110px)";
+  this.style.transform="translate(80vw,-10.1vh)";
   arrs[0].style.rotate=0+"deg";
 })
-

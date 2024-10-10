@@ -11,19 +11,21 @@ body {
 
 /* 导航栏部分 */
 .head-nav {
-  z-index: 1000;
+  z-index: 10000;
   position: fixed;
   background-color: #2e2e2e;
-  height: 80px;
+  left: 0;
+  top: 0;
+  height: 8vh;
   width: 100vw;
 }
 
 .head-nav-logo {
   position: fixed;
-  top: -40px;
-  left: 100px;
-  height: 150px;
-  width: 250px;
+  top: -4vh;
+  left: 5vw;
+  height: 14vh;
+  width: 13vw;
   border: none;
 }
 
@@ -32,20 +34,20 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  left: 411px;
-  top: 12px;
+  left: 21vw;
+  top: 1.2vh;
   border: 1px solid #fff;
   border-radius: 25px;
-  height: 57px;
-  width: 62px;
-  transition: all 0.3s;
+  height: 5.2vh;
+  width: 3%;
+  transition: width 0.3s;
 }
 
 .search img {
   position: fixed;
-  left: 424px;
-  width: 35px;
-  height: 35px;
+  left: 21vw;
+  width: 3vw;
+  height: 3.5vh;
   cursor: pointer;
 }
 
@@ -54,25 +56,27 @@ body {
   outline: none;
   background-color: #2e2e2e;
   position: relative;
-  left: 66px;
+  left: 3vw;
   width: 0px;
-  height: 57px;
+  height: 5.2vh;
+  font-size: 30px;
+  color: white;
 }
 
 .search-onclick1 {
-  width: 1170px;
+  width: 59%;
 }
 
 .search-onclick2 {
-  width: 1000px;
+  width: 50.5%;
 }
 
 .self-information {
   position: fixed;
-  left: 1590px;
-  top: 20px;
-  width: 167px;
-  height: 40px;
+  left: 80.3%;
+  top: 1.8%;
+  width: 8.4%;
+  height: 3.7%;
 }
 
 .self-information .character {
@@ -86,8 +90,8 @@ body {
 
 .self-information .arr {
   position: fixed;
-  top: 25px;
-  left: 1720px;
+  top: 2.7%;
+  left: 88%;
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -98,9 +102,9 @@ body {
   background-color: #fff;
   position: fixed;
   z-index: 999;
-  transform: translate(1590px, -110px);
-  width: 218px;
-  height: 185px;
+  transform: translate(80vw, -10.1vh);
+  width: 11%;
+  height: 17.1%;
   box-shadow: 0 0 2px grey;
   transition: transform 0.5s linear;
 }
@@ -108,8 +112,8 @@ body {
 .drop-content {
   padding-left: 13px;
   border-top: 1px solid black;
-  width: 205px;
-  height: 45px;
+  width: 10.3vw;
+  height: 4.25vh;
   display: flex;
   align-items: center;
 }
@@ -135,39 +139,53 @@ body {
 .side-nav {
   z-index: 1000;
   position: fixed;
-  top: 295px;
-  left: 100px;
+  top: 27.3%;
+  left: 5%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 269px;
-  height: 605px;
+  width: 13.6%;
+  height: 56%;
+}
+
+.side-nav-character {
+  padding-left: 1vw;
 }
 
 .side-nav-son {
   display: flex;
   flex-wrap: nowrap;
-  width: 269px;
   height: 62px;
   font-size: 52px;
-  color: #9c9c9c;
+  color: #cac7c7;
+  cursor: pointer;
 }
 
 .side-nav-son div {
   position: fixed;
-  left: 150px;
+  left: 7.5vw;
 }
 
 .black-lotus {
   filter: opacity(0);
   position: fixed;
-  left: 79px;
+  width: 50px;
+  height: 50px;
+  left: 75px;
+}
+
+.dot {
+  position: fixed;
+  left: 95px;
+  margin-top: 34px;
 }
 
 .white-lotus {
   filter: opacity(0);
   position: fixed;
-  left: 79px;
+  width: 50px;
+  height: 50px;
+  left: 75px;
 }
 
 .side-nav-son:hover .black-lotus {
@@ -180,19 +198,23 @@ body {
   }
 
   to {
-    filter: opacity(100%);
+    filter: opacity(1);
   }
 }
 
 /* 部门介绍 */
 .department-intr {
-  width: 1444px;
-  padding-left: 476px;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+}
+
+.title {
+  position: relative;
+  width: 600px;
+  left: 80vh;
 }
 
 .title1 {
@@ -206,44 +228,51 @@ body {
 }
 
 .running {
+  position: relative;
+  left: 25vw;
+  width: 75vw;
   display: flex;
 }
 
 .running-content1 {
   z-index: -1;
-  width: 590px;
-  height: 402px;
+  max-width: 25vw;
+  height: 39.2vh;
   overflow: hidden;
 }
 
 .running-content1 img {
+  position: relative;
+  left: 0;
+  width: 130vw;
+  height: 39.2vh;
   animation: running1 8s linear 0s backwards infinite;
 }
 
 @keyframes running1 {
   0% {
-    transform: translate(0, 0);
+    transform: translate(-8.99vw, 0);
   }
   11% {
-    transform: translate(0, 0);
+    transform: translate(-8.99vw, 0);
   }
   22% {
-    transform: translate(-600px, 0);
+    transform: translate(-37.8vw, 0);
   }
   44% {
-    transform: translate(-600px, 0);
+    transform: translate(-37.8vw, 0);
   }
   55% {
-    transform: translate(-1200px, 0);
+    transform: translate(-65.6vw, 0);
   }
   77% {
-    transform: translate(-1200px, 0);
+    transform: translate(-65.6vw, 0);
   }
   88% {
-    transform: translate(-1795px, 0);
+    transform: translate(-93.4vw, 0);
   }
   100% {
-    transform: translate(-1795px, 0);
+    transform: translate(-93.4vw, 0);
   }
 }
 
@@ -312,7 +341,6 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
   width: 100vw;
   height: 100vh;
 }
@@ -320,36 +348,44 @@ body {
 .video-container {
   display: flex;
   justify-content: center;
-  width: 1444px;
-  padding-left: 476px;
+  width: 72.9vw;
+  padding-left: 17.1vw;
 }
+
 .video-part .title {
-  padding-left: 250px;
   color: white;
 }
 
-video {
-  width: 600px;
-  height: 344px;
+.online-video {
+  width: 35vw;
+  height: 40vh;
 }
+
 /* 挑战服务板块 */
 .tenzor-service {
-  height: 265vh;
+  height: 200vh;
   width: 100vw;
   overflow: hidden;
 }
 
 .service-arr {
-  background-image: url(./service-arr.svg);
   position: relative;
   width: 100vw;
-  height: 808px;
+  height: 80vh;
   left: 95vw;
-  top: 200px;
+  top: 30vh;
 }
+
+.service-arr-img {
+  position: absolute;
+  width: 100vw;
+  height: 80vh;
+  z-index: -1;
+}
+
 .service-img-container {
-  width: 1444px;
-  height: 600px;
+  width: 72.9vw;
+  height: 55.5vh;
   margin-left: 242px;
   padding-top: 100px;
   display: grid;
@@ -361,28 +397,29 @@ video {
 }
 .film {
   grid-area: a;
-  width: 568px;
-  height: 631px;
+  width: 28.7vw;
+  height: 58.4vh;
 }
 
 .editing {
   grid-area: b;
-  width: 503px;
-  height: 280px;
+  width: 25.4vw;
+  height: 25.9vh;
 }
 
 .customization {
   grid-area: c;
-  width: 253px;
-  height: 280px;
+  width: 12.7vw;
+  height: 25.9vh;
 }
 
 .video-process {
   grid-area: d;
-  width: 776px;
-  height: 332px;
+  width: 39.2vw;
+  height: 30.7vh;
 }
 
+/* 浮动图片部分 */
 .img-floating {
   width: 100vw;
   height: 100vh;
@@ -392,45 +429,55 @@ video {
   position: relative;
 }
 
-/* 浮动图片部分 */
 .eddie-huang {
   z-index: 1;
   position: absolute;
-  transform: translate(543px, 83px);
+  max-width: 25.4vw;
+  max-height: 22.2vh;
+  transform: translate(27.4vw, 7.7vh);
   transition: scale 0.2s linear;
 }
 
 .happybug {
   z-index: 2;
   position: absolute;
-  transform: translate(1212px, 83px);
+  max-width: 30.7vw;
+  max-height: 28.3vh;
+  transform: translate(61.2vw, 7.7vh);
   transition: scale 0.2s linear;
 }
 
 .lan-er-cheng {
   z-index: 5;
   position: absolute;
-  transform: translate(669px, 176px);
+  max-width: 47.1vw;
+  max-height: 42.2vw;
+  transform: translate(33.7vw, 15vh);
   transition: scale 0.2s linear;
 }
 
 .yi-qian {
   z-index: 4;
   position: absolute;
-  transform: translate(604px, 441px);
+  max-width: 30.1vw;
+  max-height: 28.4vw;
+  transform: translate(30.5vw, 40.8vh);
   transition: scale 0.2s linear;
 }
 
 .xia-he-xiao {
   z-index: 3;
   position: absolute;
-  transform: translate(1246px, 582px);
+  max-width: 25.4vw;
+  max-height: 22.2vw;
+  transform: translate(62.9vw, 53.8vh);
   transition: scale 0.2s linear;
 }
 
 .floating:hover {
   scale: 1.1;
 }
+
 /* 总结展示部分 */
 .general {
   position: relative;
@@ -440,17 +487,19 @@ video {
   background-color: black;
   display: flex;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .left-poster {
   height: 100vh;
-  width: 1263px;
+  width: 63.9vw;
   display: flex;
 }
 
 .right-poster {
+  padding-right: 2vw;
   height: 100vh;
-  width: auto;
+  width: 30vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -458,31 +507,62 @@ video {
 }
 
 .tech {
-  transform: translate(-133px, -2px);
+  transform: translate(-6.7vw, -2px);
 }
 
 .video-department {
-  transform: translate(-879px, -2px);
+  transform: translate(-44.3vw, -2px);
 }
 
 .art {
-  transform: translate(-900px, -2px);
+  transform: translate(-45.4vw, -2px);
 }
 
 .img-poster {
   position: relative;
-  width: 1567px;
-  height: 1108px;
-  filter: grayscale(100%);
-  transition: filter 0.5s linear;
+  width: 79.1vw;
+  height: 100vh;
 }
 
-.img-poster:hover {
-  filter: grayscale(0);
+.mask {
+  z-index: 40;
+  position: absolute;
+  background-color: black;
+  height: 100%;
+  width: 21.3vw;
+  mix-blend-mode: color;
+  pointer-events: none;
+}
+
+.mask1 {
+  transform: translate(0, 0);
+  transition: transform 0.2s linear;
+}
+
+.img-poster-container:hover .mask1 {
+  transform: translate(-21.3vw, 0);
+}
+
+.mask2 {
+  transform: translate(0, 0);
+  transition: transform 0.2s linear;
+}
+
+.img-poster-container:hover .mask2 {
+  transform: translate(0, -100vh);
+}
+
+.mask3 {
+  transform: translate(0, 0);
+  transition: transform 0.2s linear;
+}
+
+.img-poster-container:hover .mask3 {
+  transform: translate(21.3vw, 0);
 }
 
 .img-poster-container {
-  width: 421px;
+  width: 21.3vw;
   height: 100vh;
   overflow: hidden;
 }
@@ -490,14 +570,25 @@ video {
 .tenzor {
   position: absolute;
   z-index: 50;
-  transform: translate(145px, 305px);
+  width: 51vw;
+  height: 42.3vh;
+  transform: translate(7.3vw, 28.2vh);
+  pointer-events: none;
 }
+
+.logo-poster {
+  position: absolute;
+  right: 0;
+  top: 5vh;
+  width: 15.8vw;
+  height: 20.5vh;
+}
+
 /* 页脚部分 */
 .foot {
   position: relative;
   z-index: 10000;
   width: 100vw;
-  height: 60vh;
   background-color: #a2a2a2;
   color: white;
   display: flex;
@@ -512,7 +603,7 @@ video {
 .foot-department-intro {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 25vw;
 }
 
 .department-name {

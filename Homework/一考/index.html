@@ -13,11 +13,7 @@
       /></a>
       <div class="search">
         <img src="./assets/search.svg" alt="" class="head-nav-search-logo" />
-        <input
-          type="text"
-          class="search-contents"
-          style="color: white; font-size: 30px"
-        />
+        <input type="text" class="search-contents" />
       </div>
       <div class="self-information">
         <div class="character">个人信息</div>
@@ -47,7 +43,7 @@
         <img src="./assets/dot.svg" alt="" class="dot" />
         <img src="./assets/black-lotus.svg" alt="" class="black-lotus" />
         <img src="./assets/white-lotus.svg" alt="" class="white-lotus" />
-        <div class="parts">
+        <div class="parts side-nav-character">
           <b>部门介绍</b>
         </div>
       </div>
@@ -55,7 +51,7 @@
         <img src="./assets/dot.svg" alt="" class="dot" />
         <img src="./assets/black-lotus.svg" alt="" class="black-lotus" />
         <img src="./assets/white-lotus.svg" alt="" class="white-lotus" />
-        <div class="parts">
+        <div class="parts side-nav-character">
           <b>视频风采</b>
         </div>
       </div>
@@ -63,13 +59,13 @@
         <img src="./assets/dot.svg" alt="" class="dot" />
         <img src="./assets/black-lotus.svg" alt="" class="black-lotus" />
         <img src="./assets/white-lotus.svg" alt="" class="white-lotus" />
-        <div class="parts"><b>挑战服务</b></div>
+        <div class="parts side-nav-character"><b>挑战服务</b></div>
       </div>
       <div class="side-nav-son">
         <img src="./assets/dot.svg" alt="" class="dot" />
         <img src="./assets/black-lotus.svg" alt="" class="black-lotus" />
         <img src="./assets/white-lotus.svg" alt="" class="white-lotus" />
-        <div class="parts"><b>展示总结</b></div>
+        <div class="parts side-nav-character"><b>展示总结</b></div>
       </div>
     </div>
     <div class="department-intr parts">
@@ -138,7 +134,11 @@
       </div>
       <div class="video-container">
         <div class="video">
-          <video src="./assets/kelee!.mp4" controls></video>
+          <video
+            src="./assets/kelee!.mp4"
+            controls
+            class="online-video"
+          ></video>
         </div>
         <div class="video">
           <iframe
@@ -148,14 +148,14 @@
             frameborder="no"
             framespacing="0"
             allowfullscreen="true"
-            width="600px"
-            height="350px"
+            class="online-video"
           ></iframe>
         </div>
       </div>
     </div>
     <div class="tenzor-service parts">
       <div class="service-arr">
+        <img src="./assets/service-arr.svg" alt="" class="service-arr-img" />
         <div class="service-img-container">
           <img src="./assets/film.svg" alt="" class="film" /><img
             src="./assets/editing.svg"
@@ -199,9 +199,11 @@
       <img src="./assets/tenzor.svg" alt="" class="tenzor" />
       <div class="left-poster">
         <div class="img-poster-container">
+          <div class="mask mask1"></div>
           <img src="./assets/tech.svg" alt="" class="img-poster tech" />
         </div>
         <div class="img-poster-container">
+          <div class="mask mask2"></div>
           <img
             src="./assets/video.svg"
             alt=""
@@ -209,16 +211,13 @@
           />
         </div>
         <div class="img-poster-container">
+          <div class="mask mask3"></div>
           <img src="./assets/art.svg" alt="" class="img-poster art" />
         </div>
       </div>
       <div class="right-poster">
         <a href="https://www2024.tiaozhan.com/" target="_blank"
-          ><img
-            src="./assets/logo.svg"
-            alt=""
-            class="logo-poster"
-            style="position: absolute; right: 0; top: 0"
+          ><img src="./assets/logo.svg" alt="" class="logo-poster"
         /></a>
         <div style="font-size: 160px; font-weight: bold; color: white">
           来挑战
