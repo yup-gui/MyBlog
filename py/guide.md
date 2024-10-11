@@ -93,7 +93,7 @@ python3采用UTF-8编码方式
       2.  f-string  f"Myname is {name}"    两个例子中name均是要替换进语句的变量
    4. 常用内置方法
       1. string.capitalize()  首字母大写
-      2. string.count(target,begin,end)  查找target在string里面的出现次数，begin后end控制查找范围
+      2. string.count(target,begin,end)  查找target在string里面的出现次数，begin和end控制查找范围
       3. string.find(target,begin,end)   找到target在string里面的索引    也可以使用 string.index(target，begin，end) 如果target不在string里面会报错
       4. len(string)                     返回字符串的长度
       5. string.lower()                  把string变成小写
