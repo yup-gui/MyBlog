@@ -84,6 +84,7 @@ python3采用UTF-8编码方式
    >>>a[2] == "c"
 ```
    1. 字符串截取
+   a[begin;:end:step]step为取值间距，可以不设置，可以设置为负值，负值就代表从后往前
    a[0:2] == "abc"
    2. 允许字符串拼接
    a + b == "abcdefghijkl"
@@ -99,7 +100,7 @@ python3采用UTF-8编码方式
       5. string.lower()                  把string变成小写
       6. string.split(str)               按照str将string分割成小字符串，返回储存这些小字符串的列表  a.split("c") == ["ab","def"]
       7. string.upper()                  把string变成大写
-3. 列表(list)
+1. 列表(list)
    a = ["abc","def",123,456]
    1. 列表里面允许存储不同类型的元素
    2. 和字符串一样，允许索引，截取，拼接等操作
@@ -113,13 +114,57 @@ python3采用UTF-8编码方式
       6. list.count(obj)         返回obj在list里出现的次数
       7. list.clear()            清空list
       8. list.copy()             返回list的值   b = a.copy() 此处赋值不是采用给予地址，所以 a is b >>>false
-4. 元组(tuple)
+      9. a.sort()                按照一定规则对a进行排序   ，可以人为规定规则？？？
+         如果不想改变原有列表顺序  b = sorted(a)
+2. 元组(tuple)
    a = (123,456,789)   a=(123,)创建单个元素的元组要加逗号，否则括号会被当做运算
    1. 就是不可变的列表
-5. 字典(dictionary)
-   a = {"key1":value1,"key2":value2,...}键值对的组合，key是键名字，value是键值  就是结构体(c)/对象(js)
-   
-### 七、运算符
+3. 字典(dictionary)
+   没有顺序，因此不可以使用索引，
+   a = {"key1":value1,"key2":value2,...}键值对的组合，key是键名字，value是键值,使用字符必须加双引号  就是结构体(c)/对象(js)
+   1. 键的特性：键不能出现两次，具有唯一性，值则不然。所以键可以为数字，字符，元组。其中最常做键的是整数和字符
+   2. 一些常用的内置函数和方法：
+      1. len(dict)            查询dict长度
+      2. str(dict)            按照键值对的形式打印dict
+      3. type(variable)       查询变量类型
+      4. dict.clear()         清空字典，清空所有键值对
+      5. dict2=dict1.copy()   复制dict1到dict2  浅复制，对与键值对（父对象）的修改不会影响另外一个，但对值里面（子对象）的修改会影响另外一个，因为里面的值是采用引用赋值（直接给地址）
+      dict1={"name":["yup"],"age":19}
+      dict2=dict1.copy()
+      dict2["name"]="ypg"          不会修改dict1的name键值对
+      dict2["name"].apend("ypg")   会修改dict1的name的值
+      6. dict2=dict1.fromkeys(seq[,value])  创建一个新的字典，新的字典的键与seq一样,值默认为None,设置了的话就为value
+      7. dict.get(key，fault)    找到键为key的值,没找到就返回fault值，fault可以不设置
+      8. dict.keys()           返回dict的键
+      9. dict.values()         返回dict的值
+4. 集合(set)
+   集合特点，不可重复，确定性，无序性
+   set={value1,value2,...}
+   1. 集合运算
+```python
+>>> a = set('abracadabra')
+>>> b = set('alacazam')
+>>> a                                  
+{'a', 'r', 'b', 'c', 'd'}
+>>> a - b                              # 集合a中包含而集合b中不包含的元素
+{'r', 'd', 'b'}
+>>> a | b                              # 集合a或b中包含的所有元素
+{'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
+>>> a & b                              # 集合a和b中都包含了的元素
+{'a', 'c'}
+>>> a ^ b                              # 不同时包含于a和b的元素
+{'r', 'd', 'b', 'm', 'z', 'l'}
+```
+   1. 集合基本操作
+   set.add(obj)                        将obj添加到set里面
+   set.update(variable)                更新variable到set里面，variable可以是列表，元组，字典，与原字典重复的更新，相比原字典是新的就添加
+   set.remove(obj)                     移除obj，没有obj的话就报错
+   set.discard(obj)                    移除obj，如果没有，不报错
+   set.pop()                           随机删除set里面一个元素
+   len(set)                            返回set元素个数
+   set.clear()                         清空set
+
+### 五、运算符
 仅介绍与c不同的
 1. ** 乘方运算 4 ** 2 == 16
 // 整除，往小的方向取整数  9 // 2 == 4
@@ -160,3 +205,55 @@ python3采用UTF-8编码方式
    3. ^ 异或  如果相异，返回true
    4. << 左移
    5. >> 右移
+
+### 六、条件控制
+1. if  expression:
+      coding
+2. match variable:
+      case  condition1:
+            code
+      case  condition2:
+            code
+      case  _:             /就是c中的default
+            code
+//case可以设置多个匹配值
+      case  condition31|condition32|...
+//还没想好if里面写啥的时候可以写个pass，单纯占个位置，不影响代码继续执行
+### 七、循环
+1. while  judgement:
+          code
+   while  judgement:
+          code
+   else:
+          code
+2. for in  遍历：
+   for variable in sequence:
+         code
+   else:
+         code          
+//在for循环结束后会执行一次else里面的语句，如果for里面break退出了，就不会执行else里面的代码
+3. for in range(begin,end,step) 循环：
+使用range函数进行索引  左闭右开  
+range(number)  创建从零到number-1 的序列
+range(1,10,3)  1 4 7
+
+for i range(len(list))：     //遍历list
+   print(list[i])
+
+
+列表推导式：
+```python
+a=[11,21,44,50]
+square=[]
+for x in a:
+   if x >30 :
+      square.append(x**2)
+print(square)
+```
+```python
+a=[11,21,44,50]
+square=[x**2 for x in a  if x>30]   后面if添加筛选条件
+
+```
+
+### 八、函数
